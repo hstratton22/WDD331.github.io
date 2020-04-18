@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color:#FAEBD7; 
+}
+h1, h2 {
+    font-family: 'Lora', serif;
+    
+
+}
+h1 {
+    padding-top: 1rem;
+}
+h1 a {
+    text-decoration:none;
+    color:#FAEBD7;
+    
+}
+main article {
+    margin:1rem;
+    padding:2rem;
+}
+article h2 a {
+    text-decoration:none;
+    color:black;
+}
+article h2 a:active {
+    color:#DEB887;
+}
+article h2 a:hover {
+    text-decoration:underline;
+    color:#6495ED;
+}
+article img {
+    max-width: 200px;
+    margin:auto;
+}
+
+p a {
+    text-decoration:none;
+    color:#6495ED;
+ }
+ p a:active {
+     color:#DEB887;
+
+ }
+ p a:hover {
+     color:#6495ED;
+     text-decoration:underline;
+
+ }
+header {
+    background-color:#6495ED;
+    color:#FAEBD7;
+    text-align:right;
+    padding:1rem;
+}
+main {
+    background-color:#FAEBD7; 
+    
+}
+nav a {
+    color:#FAEBD7;
+    text-decoration: none;
+    
+
+}
+nav li {
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+nav a:active {
+    color:#DEB887;
+
+}
+nav a:hover {
+    color:white;
+    text-decoration:underline;
+}
+article {
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+}
+.post-date {
+    color:grey;
+}
