@@ -87,4 +87,29 @@ article {
 .post-date {
     color:grey;
 }
-@media 
+@media only screen and (min-width:650px) {
+    body {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        max-width: 960px;
+    }
+    body header div {
+        grid-column:1;
+    }
+    main article {grid-column: 2;
+    }
+    header {
+        max-width: 150px;
+    }
+    article {
+        max-width: 500px;
+    }
+    article img {
+        max-width: 250px;
+    }
+    /*main {
+        display: flex;
+        flex-direction:column;
+    }*/
+
+}
