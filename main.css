@@ -56,6 +56,7 @@ header {
     color:#FAEBD7;
     text-align:right;
     padding:1rem;
+    margin-bottom:2rem;
 }
 main {
     background-color:#FAEBD7; 
@@ -88,28 +89,56 @@ article {
     color:grey;
 }
 @media only screen and (min-width:650px) {
-    body {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        max-width: 960px;
-    }
-    body header div {
-        grid-column:1;
-    }
-    main article {grid-column: 2;
+   
+   body {
+       margin:0;
+       max-width:1020px;
+   } 
+   body div{
+        display: flex;
+        flex-direction:row;
+        
+       
+        
     }
     header {
-        max-width: 150px;
+        max-width:200px;
+
     }
-    article {
-        max-width: 500px;
+    main {
+       max-width: 600px;
+       margin:2.5rem;
+
     }
+    /*
+    header {
+        width: 200px;
+        position:fixed;
+        height:100%;
+        top:0;
+        left:0;
+        z-index:1;
+        padding:2rem;
+        
+    }
+   
+    main  {
+        margin-left:2rem;
+       
+        width: 600px;
+    }
+    */
+    /*main article {
+        margin: auto;
+    }
+    */
     article img {
-        max-width: 250px;
+        /*max-width: 250px;*/
+        display:block;
+        max-width:250px;
+        margin-left:auto ;
+        margin-right:auto;
     }
-    /*main {
-        display: flex;
-        flex-direction:column;
-    }*/
+    
 
 }
