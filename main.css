@@ -18,6 +18,15 @@ h1 a {
     color:#FAEBD7;
     
 }
+
+h1 a:hover {
+    color:white;
+    text-decoration:underline;
+
+}
+a:active {
+    color:#DEB887;
+}
 main article {
     margin:1rem;
     padding:2rem;
@@ -42,10 +51,7 @@ p a {
     text-decoration:none;
     color:#6495ED;
  }
- p a:active {
-     color:#DEB887;
-
- }
+ 
  p a:hover {
      color:#6495ED;
      text-decoration:underline;
@@ -72,10 +78,7 @@ nav li {
     list-style-type: none;
     padding-bottom: 1rem;
 }
-nav a:active {
-    color:#DEB887;
 
-}
 nav a:hover {
     color:white;
     text-decoration:underline;
