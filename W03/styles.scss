@@ -1,0 +1,109 @@
+//variables
+$body-background-color: purple;
+$form-background-color: grey;
+$input-color: white;
+$headlines-color : white;
+
+$break-small: 500px;
+$break-medium:700px;
+$break-large: 900px;
+
+
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+@mixin center ($max-width:960px, $width:90%,){
+    width: $width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+@mixin breakpoint($break) {
+  @if $break ==large {
+    @media(min-width:$break-large) {@content;}
+  }
+  @else if $break==medium {
+    @media (min-width: $break-medium) {@content;}
+  }
+  @else if $break==smal {
+    @media (min-width:$break-small) {@content;}
+  }
+  @else {
+    @media ($break) {@content;}
+  }
+  
+}
+
+body {
+    background-color: $body-background-color; 
+    /*padding:.25rem; */        
+}
+h1 {
+    color:lighten($body-background-color, 40%);
+    @include center;
+}
+#contactform {
+    background-color: $form-background-color;
+    input {
+        padding:.25rem;
+    }
+    input, textarea {
+        background-color: $input-color;
+        flex: 2;
+        box-shadow:0 0 5px lighten($form-background-color, 20%);
+        
+
+    }
+    @include breakpoint(medium) {
+        @include center(700px);
+        padding:.5rem 0;}
+    @include breakpoint(large) {
+        @include center(70%, 900px);
+}
+}
+
+fieldset > div {
+    
+    @include flex-container(column);  
+    @include breakpoint(medium) {
+        @include flex-container(row);
+        justify-content:space-between;
+  
+
+        label {
+            align-self:center;
+        text-align:right;
+          margin-right:1rem;
+          width:50px;
+          display:inline-block;
+        
+        }
+    }
+          
+}
+
+
+#content {
+    @include center(90%);
+}
+input:last-of-type {
+    margin:.5rem 0;
+    @include breakpoint(medium) {
+        margin:.5rem .25rem ;
+    }
+}
+form legend {
+    color:saturate($body-background-color, 30%);
+}
+textarea {
+    margin-top:.25rem;
+    @include breakpoint(medium) {
+        margin-right:.5rem;
+    }}
+

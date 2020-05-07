@@ -1,0 +1,144 @@
+/*variables*/
+$header-background:#6495ED;
+$body-background:#FAEBD7;
+$active-color:#DEB887;
+$article-background:white;
+
+$break-medium:650px;
+
+@mixin breakpoint {
+    @media only screen and (min-width:$break-medium) {@content;}
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color:$body-background; 
+    @include breakpoint {
+        margin:0;
+       max-width:1020px;
+   } 
+}
+body div {
+    @include breakpoint {
+ display: flex;
+flex-direction:row;
+}
+
+}
+h1, h2 {
+    font-family: 'Lora', serif;
+    
+
+}
+h1 {
+    padding-top: 1rem;
+     a {
+    text-decoration:none;
+    color:$body-background;
+     
+     &:hover {
+        color:$article-background;
+        text-decoration:underline;
+    
+    }
+    &:active {
+        color:$active-color;
+        
+    }
+}
+    
+}
+
+
+
+article {
+    background-color: $article-background;
+    padding: 1rem;
+    margin: 1rem auto;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+article h2 a {
+    text-decoration:none;
+    color:black;
+    &:active {
+        color:$active-color;
+    }
+    &:hover {
+        text-decoration:underline;
+        color:$header-background;
+    }
+}
+
+
+article img {
+    max-width: 200px;
+    margin:auto;
+    @include breakpoint {
+        display:block;
+        max-width:250px;
+        margin-left:auto ;
+        margin-right:auto;
+    }
+}
+
+p a {
+    text-decoration:none;
+    color:$header-background;
+    &:hover {
+    color:$header-background;
+    text-decoration:underline;
+
+}
+    &:active {
+    color:$active-color;
+}
+ 
+}
+ 
+header {
+    background-color:$header-background;
+    color:$body-background;
+    text-align:right;
+    padding:1rem;
+    margin-bottom:2rem;
+    @include breakpoint {
+        max-width:200px;
+
+    
+    }
+}
+main {
+    background-color:$body-background; 
+    @include breakpoint {
+        max-width: 600px;
+       margin:2.5rem;
+    }
+    
+}
+nav li {
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+nav li a {
+    color:$body-background;
+    text-decoration: none;
+    &:hover {
+        color:$article-background;
+        text-decoration:underline;
+    }
+    &:active {
+        color:$active-color;
+    }
+    
+
+}
+
+ 
+
+.post-date {
+    color:grey;
+}

@@ -1,3 +1,6 @@
+/*variables*/
+$blue:
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -95,6 +98,7 @@ article {
     background-color: white;
     padding: 1rem;
     margin: auto;
+    box-shadow: 5px 5px 5px lightgrey;
 }
 .post-date {
     color:grey;
@@ -121,30 +125,9 @@ article {
        margin:2.5rem;
 
     }
-    /*
-    header {
-        width: 200px;
-        position:fixed;
-        height:100%;
-        top:0;
-        left:0;
-        z-index:1;
-        padding:2rem;
-        
-    }
-   
-    main  {
-        margin-left:2rem;
-       
-        width: 600px;
-    }
-    */
-    /*main article {
-        margin: auto;
-    }
-    */
+    
     article img {
-        /*max-width: 250px;*/
+        
         display:block;
         max-width:250px;
         margin-left:auto ;
