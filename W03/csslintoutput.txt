@@ -1,0 +1,20 @@
+
+main.css
+  49:1  ×  Expected selector "article h2 a" to come before selector "h1 a:hover"          no-descending-specificity
+  49:1  ×  Expected selector "article h2 a" to come before selector "h1 a:active"         no-descending-specificity
+  74:1  ×  Expected selector "p a" to come before selector "h1 a:hover"                   no-descending-specificity
+  74:1  ×  Expected selector "p a" to come before selector "h1 a:active"                  no-descending-specificity
+  74:1  ×  Expected selector "p a" to come before selector "article h2 a"                 no-descending-specificity
+  74:1  ×  Expected selector "p a" to come before selector "article h2 a:active"          no-descending-specificity
+  74:1  ×  Expected selector "p a" to come before selector "article h2 a:hover"           no-descending-specificity
+  78:1  ×  Expected selector "p a:hover" to come before selector "article h2 a:active"    no-descending-specificity
+  78:1  ×  Expected selector "p a:hover" to come before selector "article h2 a:hover"     no-descending-specificity
+  82:1  ×  Expected selector "p a:active" to come before selector "article h2 a:active"   no-descending-specificity
+  82:1  ×  Expected selector "p a:active" to come before selector "article h2 a:hover"    no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "h1 a:hover"              no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "h1 a:active"             no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "article h2 a:active"     no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "article h2 a:hover"      no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "p a:hover"               no-descending-specificity
+ 114:1  ×  Expected selector "nav li a" to come before selector "p a:active"              no-descending-specificity
+
