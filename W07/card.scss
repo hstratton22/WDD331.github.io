@@ -10,6 +10,8 @@ $num-columns : 8;
 $one-column : 100% / $num_columns;
 $loop-start: 1;
 $loop-end: $num-columns +1;
+$one-column:12.5%;
+
 
 @import "partials";
 
@@ -68,6 +70,7 @@ $loop-end: $num-columns +1;
   flex: 1;
   text-align: center;
 }
+
 
 
 /*.col-1 {
