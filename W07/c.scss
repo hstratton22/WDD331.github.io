@@ -1,21 +1,14 @@
-
-
 //variables to setup basic size and shape of the card and pips
 $card-width: 40vw;
 $card-height: $card-width*1.4;
 $font-size-number: $card-width * 0.1;
 $icon-size: $card-width / 5;
-//variables
 $num-columns : 8;
 $one-column : 100% / $num_columns;
 $loop-start: 1;
 $loop-end: $num-columns +1;
 $one-column: 12.5%;
-
-
-@import "partials";
-
-
+@import "cpartial";
 *,
 *:before,
 *:after {
@@ -39,6 +32,9 @@ $one-column: 12.5%;
     padding: .5em;
 }
 
+
+
+
 //set icon size
 .icon {
     width: $icon-size;
@@ -60,31 +56,32 @@ $one-column: 12.5%;
     transform: rotate(180deg);
 }
 .row {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: space-between;
-  height: 100%;
-}
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+    }
+
 .cell {
-  flex: 1;
-  text-align: center;
-}
-
+    flex: 1;
+    text-align: center;
+  }
 .col-1 {
-@include col(1);
+    @include col(1);
 }
-
 .col-2 {
- @include col(2);
+    @include col(2);
 }
-.col-8 {
- @include col(8);
-}
-.offset-2 {
-  @include offset(2);
 
-}
+.col-8 {
+        @include col(8);
+    }
+    /*
+.offset-2 {
+        margin-left: 25%;
+        }
+
 .offset-1 {
-  @include offset(1);
-}
+    margin-left: 12.5%;
+}*/

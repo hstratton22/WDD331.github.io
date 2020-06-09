@@ -1,0 +1,193 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+body {
+  color:$body-font;
+  font-family: 'BYUI Open Sans';
+}
+
+.text-white {
+  color:#fff;
+}
+.icon-byui-logo {
+  background-color:$body-font;
+  color: #fff;
+  width:3rem;
+}
+header {
+  background-color: $byui-blue;
+  height:4rem;
+  
+
+}
+.site-banner {
+  
+  display:grid;
+  grid-template-columns:5rem 1fr 5rem;
+  align-items: center;
+  /*flex-direction:row;
+  justify-content:flex-end;*/
+
+}
+.site-banner__left {
+  /*text-align:left;*/
+  margin:0;
+  align-self:center;
+  width:150%;
+  
+  
+}
+.site-banner__right {
+  grid-column:3;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  
+}
+.mobile-header-icon {
+ color:white;
+ background-color: transparent;
+ text-decoration:none;
+}
+h1 {
+  display:none;
+}
+.icon-audience  {
+  border:none;
+}
+form {
+  display:none;
+}
+.site-title {
+  background-color:$light-gray;
+  padding:1rem 0;
+  text-align:center;
+  font-weight:300;
+  margin:0;
+  border-bottom:1px solid $dark-gray;
+}
+.border-top {
+  border-top: 1px solid  $med-gray;
+}
+.border-bottom {
+  border-bottom:1px solid  $med-gray;
+}
+.blue-text a{
+  color:$link-blue;
+  text-decoration:none;
+}
+.date  {
+  text-transform: uppercase;
+  font-size:.75rem;
+  margin-bottom:-.25rem;
+
+}
+.interest-boxes {
+  
+}
+.spacing {
+  margin:2rem .5rem;
+}
+.border-full {
+  border:1px solid $med-gray;
+}
+figcaption {
+  margin-left:.75rem;
+  padding-bottom:.25rem;
+}
+.links li {
+  padding:.5rem 1rem;
+}
+.links a {
+  display:block;
+  text-decoration:none;
+    
+ 
+}
+.links ul {
+  list-style-type: none;
+  margin-left:0;
+  padding:2rem 1rem;
+  
+  
+}
+.dkgreyback {
+  background-color: $dark-gray;
+  padding: .75rem;
+  margin:0;
+  font-size:2.75;
+  font-weight:400;
+}
+.greyback {
+  background-color: $light-gray;
+
+}
+.blueback {
+  background-color: $byui-blue;
+  padding: .75rem;
+  margin:0;
+  font-size:2.75;
+  font-weight:400;
+}
+.blacklink a {
+  color:#020202;
+
+}
+.icon-angle-right {
+  font-weight:300;
+  
+  float:right;
+
+}
+.button {
+  display:inline-block;
+  background-color:$link-blue ;
+  text-align:center;
+  padding:.5rem 1rem;
+  border-radius:5px;
+  float:right;
+}
+  
+.button a {
+  text-decoration:none;
+  letter-spacing: 1.25;
+}
+
+/*.dates-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 5fr;
+
+}*/
+@media only screen and (min-width:$sm-break) {
+
+}
