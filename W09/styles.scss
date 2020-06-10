@@ -33,7 +33,7 @@ img {
 }
 body {
   color:$body-font;
-  font-family: 'BYUI Open Sans';
+  font-family: 'BYUI Open Sans', Verdana, sans-serif;
   
 }
 
@@ -42,11 +42,20 @@ body {
 }
 .icon-byui-logo {
   background-color:$body-font;
+  padding:1.25rem 1rem 1rem 1rem;
   color: #fff;
-  width:3rem;
+  width:100%;
+  font-size:2rem;
+  text-align:center;
+  text-decoration:none;
+}
+.icon-search, .icon-audience, .icon-menu {
+  font-size:2.5rem;
+  margin:.5rem;
 }
 header {
   background-color: $byui-blue;
+ 
   /*height:4rem;*/
   
 
@@ -58,7 +67,7 @@ header {
 .site-banner {
   
   display:grid;
-  grid-template-columns:5rem 1fr 5rem;
+  grid-template-columns:8rem 1fr 15rem;
   align-items: center;
   /*flex-direction:row;
   justify-content:flex-end;*/
@@ -68,7 +77,7 @@ header {
   /*text-align:left;*/
   margin:0;
   align-self:center;
-  width:150%;
+  /*width:150%;*/
   
   
 }
@@ -176,7 +185,7 @@ figcaption {
   background-color: $byui-blue;
    
 }
-aside, article, .hero, .border-full {
+aside, article, .hero, .border-full, .message {
   max-width:480px;
 }
 
@@ -190,6 +199,10 @@ aside, article, .hero, .border-full {
   float:right;
 
 }
+.dates-grid span {
+  font-weight:bold;
+  font-size:smaller;
+}
 .button {
   display:inline-block;
   background-color:$link-blue ;
@@ -197,6 +210,11 @@ aside, article, .hero, .border-full {
   padding:.5rem 1rem;
   border-radius:5px;
   float:right;
+}
+.button::after {
+  content: "";
+  clear: both;
+
 }
   
 .button a {
@@ -206,7 +224,52 @@ aside, article, .hero, .border-full {
 .newsroom img {
   display:none;
 }
+.newsroom p {
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.message {
+  border-radius:5px;
+}
+.message-head {
+  background-color: $light-gray;
+  color:$body-font;
+  margin:0;
+  padding:.25rem 1rem;
+}
+.devo {
+  padding:.5rem;
+}
+/*.devo {
+  display:grid;
+  grid-template-columns:2fr 3fr;
+}
+.devo img {
+  grid-column:1;
+}
+.devo p {
+  color: $light-gray;
+  background-color: $dark-gray;
+  grid-column:2;
+  grid-row:1;
 
+}
+.devo-details {
+  display:flex;
+  flex-direction:column;
+  grid-column:2;
+  grid-row:2;
+} 
+.devo-foot {
+  padding:2rem;
+}
+*/
+footer, .footer-graphic::before {
+  background:url(https://www.byui.edu/prebuilt/stylenew/images/foot/taylor_graphic.gif) bottom no-repeat;
+  content:"";
+  display:block;
+  height:146px;
+  padding:0;
+}
 /*.dates-grid {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 5fr;
@@ -228,11 +291,21 @@ aside, article, .hero, .border-full {
     grid-gap:2rem;
 
   }
+  .site-banner__left {
+    margin-left:2rem;
+    /*width:200%;*/
+
+  }
+  .icon-byui-logo {
+    /*margin-left:2rem;*/
+    padding:2.5rem 1.25rem 1.25rem 1rem;
+
+  }
   .site-title {
    /* grid-column:1/4;
     grid-row:1;*/
     text-align:left;
-    padding-left:3rem;
+    padding-left:2rem;
     font-size:2rem;
     border-bottom:none;
     color:$dark-gray;
@@ -246,8 +319,9 @@ aside, article, .hero, .border-full {
     
   }
   aside {
+    max-width:350px;
     grid-column:3;
-    grid-row:1/5;
+    grid-row:1/4;
   }
   .interest-boxes div {
     margin-right:2rem;
@@ -266,6 +340,10 @@ aside, article, .hero, .border-full {
     grid-column:1/3;
     grid-row:2;
   }
+  .message {
+    grid-column:3;
+    grid-row:3;
+  }
   
 
   .spacing {
@@ -283,7 +361,7 @@ aside, article, .hero, .border-full {
     display:inline;
     max-width:125px;
     float:left;
-    margin:1rem;
+    margin:1rem 1rem 1rem 0;
   }
   .links ul {
     margin-top:0;
