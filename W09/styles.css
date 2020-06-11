@@ -1044,15 +1044,19 @@ body {
   background-color: #020202;
   padding: 1.25rem 1rem 1rem 1rem;
   color: #fff;
-  width: 100%;
+  max-width: 100%;
   font-size: 2rem;
   text-align: center;
   text-decoration: none;
 }
 
 .icon-search, .icon-audience, .icon-menu {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin: 0.5rem;
+  font-style: normal;
+  cursor: pointer;
+  font-family: "icomoon" !important;
+  line-height: 1;
 }
 
 header {
@@ -1065,7 +1069,8 @@ header {
 }*/
 .site-banner {
   display: grid;
-  grid-template-columns: 8rem 1fr 15rem;
+  /*grid-template-columns:8rem 1fr 15rem;*/
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   /*flex-direction:row;
   justify-content:flex-end;*/
@@ -1074,7 +1079,7 @@ header {
 .site-banner__left {
   /*text-align:left;*/
   margin: 0;
-  align-self: center;
+  align-self: end;
   /*width:150%;*/
 }
 
@@ -1086,9 +1091,10 @@ header {
 }
 
 .mobile-header-icon {
-  color: white;
+  /*color:white;*/
   background-color: transparent;
   text-decoration: none;
+  border: transparent;
 }
 
 h1 {
@@ -1189,7 +1195,7 @@ figcaption {
   background-color: #056cb6;
 }
 
-aside, article, .hero, .border-full, .message {
+aside, article, .hero, .border-full, .message, .get-info {
   max-width: 480px;
 }
 
@@ -1197,8 +1203,11 @@ aside, article, .hero, .border-full, .message {
   color: #020202;
 }
 
-.icon-angle-right {
+.icon-angle-right, .icon-triangle-down {
   font-weight: 300;
+}
+
+.right {
   float: right;
 }
 
@@ -1213,17 +1222,21 @@ aside, article, .hero, .border-full, .message {
   text-align: center;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  float: right;
 }
 
-.button::after {
+/*.button::after {
   content: "";
   clear: both;
-}
 
+
+}*/
 .button a {
   text-decoration: none;
   letter-spacing: 1.25;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .newsroom img {
@@ -1234,7 +1247,7 @@ aside, article, .hero, .border-full, .message {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.message {
+.rounded {
   border-radius: 5px;
 }
 
@@ -1243,6 +1256,8 @@ aside, article, .hero, .border-full, .message {
   color: #020202;
   margin: 0;
   padding: 0.25rem 1rem;
+  text-align: left;
+  /*display:block;*/
 }
 
 .devo {
@@ -1324,13 +1339,18 @@ footer, .footer-graphic::before {
     padding: 0;
     margin: 0;
     grid-column: 1/3;
-    grid-row: 1;
+    grid-row: 1/3;
   }
 
   aside {
     max-width: 350px;
     grid-column: 3;
-    grid-row: 1/4;
+    grid-row: 2/4;
+  }
+
+  .get-info {
+    grid-column: 3;
+    grid-row: 1;
   }
 
   .interest-boxes div {
@@ -1346,12 +1366,12 @@ footer, .footer-graphic::before {
     flex-direction: row;
     justify-content: space-between;
     grid-column: 1/3;
-    grid-row: 2;
+    grid-row: 3;
   }
 
   .message {
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 4;
   }
 
   .spacing {
@@ -1360,7 +1380,7 @@ footer, .footer-graphic::before {
 
   article {
     grid-column: 1/3;
-    grid-row: 3;
+    grid-row: 4/6;
   }
 
   article, .hero {
@@ -1381,7 +1401,7 @@ footer, .footer-graphic::before {
 
   footer {
     grid-column: 1/4;
-    grid-row: 4;
+    grid-row: 6;
   }
 }
 
