@@ -1042,16 +1042,17 @@ body {
 
 .icon-byui-logo {
   background-color: #020202;
-  padding: 1.25rem 1rem 1rem 1rem;
+  padding: 0.75rem 0.5rem 15px 0.5rem;
   color: #fff;
-  max-width: 100%;
+  width: 100%;
   font-size: 2rem;
+  margin-left: -0.25rem;
   text-align: center;
   text-decoration: none;
 }
 
 .icon-search, .icon-audience, .icon-menu {
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin: 0.5rem;
   font-style: normal;
   cursor: pointer;
@@ -1061,6 +1062,7 @@ body {
 
 header {
   background-color: #056cb6;
+  margin: 0 -1rem;
   /*height:4rem;*/
 }
 
@@ -1068,33 +1070,25 @@ header {
   border:transparent;
 }*/
 .site-banner {
-  display: grid;
-  /*grid-template-columns:8rem 1fr 15rem;*/
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  /*flex-direction:row;
-  justify-content:flex-end;*/
-}
-
-.site-banner__left {
-  /*text-align:left;*/
-  margin: 0;
-  align-self: end;
-  /*width:150%;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.75rem;
 }
 
 .site-banner__right {
-  grid-column: 3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .mobile-header-icon {
-  /*color:white;*/
   background-color: transparent;
-  text-decoration: none;
   border: transparent;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -1143,8 +1137,14 @@ main {
   margin-bottom: -0.25rem;
 }
 
-.hero {
+.hero img {
   padding: 0;
+}
+
+.responsive {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
 }
 
 .spacing {
@@ -1203,6 +1203,27 @@ aside, article, .hero, .border-full, .message, .get-info {
   color: #020202;
 }
 
+.sbold {
+  font-weight: bold;
+  font-size: smaller;
+}
+
+/*.dates-grid {
+
+  display:grid;
+  grid-template-columns:1fr 1fr 3fr;
+  grid-gap:.25rem;
+}
+.sbold {
+  grid-column:1;
+}
+.hyphen {
+  grid-column:2;
+
+}
+.topic {
+  grid-column:3;
+}*/
 .icon-angle-right, .icon-triangle-down {
   font-weight: 300;
 }
@@ -1314,24 +1335,32 @@ footer, .footer-graphic::before {
     grid-gap: 2rem;
   }
 
-  .site-banner__left {
-    margin-left: 2rem;
-    /*width:200%;*/
+  .site-banner {
+    /*max-width:1320px;*/
   }
 
+  /*.site-banner__left {
+    margin-left:2rem;
+
+
+  }
   .icon-byui-logo {
-    /*margin-left:2rem;*/
-    padding: 2.5rem 1.25rem 1.25rem 1rem;
-  }
+    margin-left:0;
 
+    padding-top:3.5rem;
+    padding-bottom:2rem;
+
+  }
+  */
   .site-title {
     /* grid-column:1/4;
      grid-row:1;*/
     text-align: left;
-    padding-left: 2rem;
+    padding-left: 2.75rem;
     font-size: 2rem;
     border-bottom: none;
     color: #727272;
+    margin: 0 auto;
   }
 
   .hero {
@@ -1351,6 +1380,7 @@ footer, .footer-graphic::before {
   .get-info {
     grid-column: 3;
     grid-row: 1;
+    max-width: 350px;
   }
 
   .interest-boxes div {
