@@ -1,0 +1,106 @@
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /*z-index: 2;*/
+  z-index: 999;
+  height: 28px;
+  width: 28px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu-icon:hover {
+  background: black;
+  padding: 0.125rem;
+}
+.menu-icon.open {
+  left: 25%;
+}
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background: grey;
+  border-radius: 20px;
+  transition: all 500ms ease-out;
+}
+.menu-icon span::before {
+  top: -8px;
+}
+.menu-icon span::after {
+  top: 8px;
+}
+.menu-icon.open > span {
+  background: transparent;
+}
+.menu-icon.open > span::before, .menu-icon.open > span::after {
+  /* background: white;*/
+  top: 0px;
+}
+.menu-icon.open > span::before {
+  transform: rotate(-225deg);
+}
+.menu-icon.open > span::after {
+  transform: rotate(225deg);
+}
+
+/* SLIDING MENU PANEL */
+.menu {
+  position: absolute;
+  left: -30%;
+  /*z-index: 1;*/
+  z-index: 998;
+  background: black;
+  width: 30%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 250px;
+    left: -250px;
+    padding: 50px;
+  }
+}
+.menu.open {
+  left: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  /* justify-content: start;
+   align-items:start;*/
+}
+
+h1, p {
+  color: black;
+  margin: 2rem 1rem;
+  padding-top: 2rem;
+}
+
+.menu p {
+  color: grey;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+/*# sourceMappingURL=newslidestyles.css.map */

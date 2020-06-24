@@ -13,17 +13,18 @@
     height:40px;
     background-color:transparent;
     position:relative;
+       
     transform:translateX(-350px);
     
     
   }
-  #wrapper .open {
+  .wrapper .open {
     width:400px;
     height:100vh;
     background-color:black;
     color:grey;
     transform:translateX(350px);
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
     
     
   }
@@ -36,13 +37,13 @@
     top:0;
    
   }
-  #menu-icon .open {
-    /*position:absolute;
-    right:10px;
-    top:10px;*/
+  .menu-icon:hover {
+    background-color:black;
+    padding:.125rem;
     
-    
+
   }
+ 
   .bar1 {
     width: 35px;
     height: 5px;
@@ -90,18 +91,25 @@
     padding:0 .5rem;
     
   }
-  #menu-items {
+  .menu-items {
     color:grey;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    z-index:10;
 
 
   }
   
-  #menu-items li{
+  .menu-items li{
     
     list-style-type:none;
     padding:1rem 0;
     font-size:1.5rem;
     
+   }
+   .menu-items li:hover {
+     color:white;
+
    }
   

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>curtain</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+      </head>
+    <body>
+        <!-- The parent component -->
+<div class="curtain">
+	
+    <!-- The component wrapper :ensures full coverage-->
+    <div class="curtain__wrapper">
+      
+      <!-- The checkbox hack! :Allows selection to be clicked anywhere -->
+      <input type="checkbox" checked>
+      
+      <!-- The left curtain panel: will slide back and forth from left -->
+      <div class="curtain__panel curtain__panel--left">
+        <h1>Click here&nbsp; </h1>
+  
+      </div> 
+    <!--  The prize behind the curtain panels-->
+         <div class="curtain__prize">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/trophy.svg">
+        <h2>Surprise! It's a trophy!</h2>
+      </div>
+         
+      <!-- The right curtain panel: moves back and forth from right-->
+      <div class="curtain__panel curtain__panel--right">
+        <h1> to reveal</h1>
+          
+      </div> <!-- curtain__panel close -->
+      
+    </div> <!-- curtain__wrapper close -->
+  
+  </div> <!-- curtain  close-->
+    </body>
+</html>
