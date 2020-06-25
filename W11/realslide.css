@@ -6,18 +6,18 @@
    height: 28px;
    width: 28px;*/
   width: 10%;
+  /*height:100%;*/
   height: 100vh;
   /*outline: none;*/
   cursor: pointer;
 }
-
 .menu-icon::after {
   top: 0;
   left: -25%;
   height: 100vh;
   width: 30%;
-  transform: translateX(-25%);
-  /*transition: 1s;*/
+  /*transform: translateX(-25%) ;
+  transition: 1s;*/
 }
 
 .menu-icon span,
@@ -30,7 +30,8 @@
   background: grey;
   border-radius: 20px;
   transition: all 500ms ease-out;
-  z-index: 999;
+  /*z-index:999;*/
+  z-index: 2;
 }
 
 .menu-icon span::before {
@@ -70,7 +71,7 @@
   width: 30%;
   background: black;
   transform: translateX(0);
-  transition: 3s ease-out;
+  transition: 2s ease-out;
   /*margin-top:-1.5rem;*/
 }
 .menu-icon.open span {

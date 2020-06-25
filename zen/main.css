@@ -1,0 +1,25 @@
+.gearbox {
+    width: 500px;
+    height:500px;
+    border: 1px solid black;
+}
+
+.gear1 {
+    width: 200px;
+    height:280px;
+    background-image: url(gear1.svg);
+    background-repeat: no-repeat;
+    animation: rotate 10s linear infinite reverse;
+    -webkit-animation: rotate 10s linear infinite reverse;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform:rotate(0)}
+    to {-webkit-transform:rotate(360deg)}
+  }
+  
+@keyframes rotate {
+    from {transform:rotate(0)}
+    to {transform:rotate(360deg)}
+}
+
