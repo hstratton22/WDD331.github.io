@@ -1,0 +1,115 @@
+$color1: grey;
+$color-2: black;
+$color-3:white;
+
+
+
+
+.menu-icon {
+    position: absolute;
+   /* top: 20px;
+    left: 20px;
+    z-index: 2;
+    height: 28px;
+    width: 28px;*/
+    width:10%;
+    height:100vh;
+    /*outline: none;*/
+    cursor: pointer;
+    
+    
+}
+  .menu-icon::after {
+    top:0;
+    left:-25%;
+    height:100vh;
+    width:30%;
+    transform: translateX(-25%) ;
+    /*transition: 1s;*/
+    
+
+  }
+  
+  
+  .menu-icon span,
+  .menu-icon span::before,
+  .menu-icon span::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2.5px;
+    background:$color1;
+    border-radius: 20px;
+    transition: all 500ms ease-out;
+    z-index:999;
+  }
+  .menu-icon span::before {
+    top: -8px;
+  }
+  .menu-icon span::after {
+    top: 8px;
+  }
+  .menu-icon.open > span {
+    background: transparent;
+  }
+  .menu-icon.open > span::before, .menu-icon.open > span::after {
+    background: $color-3;
+    top: 0px;
+  }
+  .menu-icon.open > span::before {
+    transform: rotate(-225deg);
+  }
+  .menu-icon.open > span::after {
+    transform: rotate(225deg);
+  }
+  .menu-icon span:hover,
+  .menu-icon span:hover::before,
+  .menu-icon span:hover::after {
+    background-color:$color-2;
+  } 
+  
+  .menu-icon.open {
+    left: 0;
+    height:100vh;
+    width:30%;
+    background:$color-2;
+    transform:translateX(0);
+    transition:3s ease-out;
+    /*margin-top:-1.5rem;*/
+  }
+  .menu-icon.open span  {
+    right:20px;
+    top:20px;
+  }
+   .menu-icon.open span:hover::before, .menu-icon.open span:hover::after {
+    background-color:$color1;
+  }
+.menu-icon ul {
+    display:hidden;
+    opacity:0;
+    z-index:-1;
+    text-align:center;
+    margin:2rem auto;
+    
+} 
+ul li {
+    list-style-type: none;
+    margin:2rem auto;
+    font-size:2rem;
+    color:$color1;
+
+
+}
+ul li:hover {
+  color:$color-3;
+}
+
+.menu-icon.open ul {
+    display:visible;
+    opacity:1;
+    z-index:2;
+}
+h1 {
+  padding-top:2rem;
+  font-size:2.5rem;
+}

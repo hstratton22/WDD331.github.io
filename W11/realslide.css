@@ -1,104 +1,116 @@
 .menu-icon {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    height: 28px;
-    width: 28px;
-    /*outline: none;*/
-    cursor: pointer;
-    
-    
-  }
-  .menu-icon::after {
-    top:0;
-    height:100vh;
-    width:30%;
-    transform: translateX(-25%) ;
-    
-
-  }
-  
-  
-  .menu-icon span,
-  .menu-icon span::before,
-  .menu-icon span::after {
-    position: absolute;
-    content: "";
-    width: 28px;
-    height: 2.5px;
-    background: grey;
-    border-radius: 20px;
-    transition: all 500ms ease-out;
-    z-index:999;
-  }
-  .menu-icon span::before {
-    top: -8px;
-  }
-  .menu-icon span::after {
-    top: 8px;
-  }
-  .menu-icon.open > span {
-    background: transparent;
-  }
-  .menu-icon.open > span::before, .menu-icon.open > span::after {
-    background: white;
-    top: 0px;
-  }
-  .menu-icon.open > span::before {
-    transform: rotate(-225deg);
-  }
-  .menu-icon.open > span::after {
-    transform: rotate(225deg);
-  }
-  .menu-icon span:hover,
-  .menu-icon span:hover::before,
-  .menu-icon span:hover::after {
-    background-color:black;
-  } 
-  
-  .menu-icon.open {
-    left: 0;
-    height:100vh;
-    width:30%;
-    background:black;
-    transform:translateX(0);
-    transition:2s ease-out;
-    margin-top:-1.5rem;
-  }
-  .menu-icon.open span  {
-    right:20px;
-    top:20px;
-  }
-   .menu-icon.open span:hover::before, .menu-icon.open span:hover::after {
-    background-color:grey;
-  }
-.menu-icon ul {
-    display:hidden;
-    opacity:0;
-    z-index:-1;
-    text-align:center;
-    margin:1rem auto;
-    
-} 
-ul li {
-    list-style-type: none;
-    margin:2rem auto;
-    font-size:2rem;
-    color:grey;
-
-
+  position: absolute;
+  /* top: 20px;
+   left: 20px;
+   z-index: 2;
+   height: 28px;
+   width: 28px;*/
+  width: 10%;
+  height: 100vh;
+  /*outline: none;*/
+  cursor: pointer;
 }
+
+.menu-icon::after {
+  top: 0;
+  left: -25%;
+  height: 100vh;
+  width: 30%;
+  transform: translateX(-25%);
+  /*transition: 1s;*/
+}
+
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background: grey;
+  border-radius: 20px;
+  transition: all 500ms ease-out;
+  z-index: 999;
+}
+
+.menu-icon span::before {
+  top: -8px;
+}
+
+.menu-icon span::after {
+  top: 8px;
+}
+
+.menu-icon.open > span {
+  background: transparent;
+}
+
+.menu-icon.open > span::before, .menu-icon.open > span::after {
+  background: white;
+  top: 0px;
+}
+
+.menu-icon.open > span::before {
+  transform: rotate(-225deg);
+}
+
+.menu-icon.open > span::after {
+  transform: rotate(225deg);
+}
+
+.menu-icon span:hover,
+.menu-icon span:hover::before,
+.menu-icon span:hover::after {
+  background-color: black;
+}
+
+.menu-icon.open {
+  left: 0;
+  height: 100vh;
+  width: 30%;
+  background: black;
+  transform: translateX(0);
+  transition: 3s ease-out;
+  /*margin-top:-1.5rem;*/
+}
+
+.menu-icon.open span {
+  right: 20px;
+  top: 20px;
+}
+
+.menu-icon.open span:hover::before, .menu-icon.open span:hover::after {
+  background-color: grey;
+}
+
+.menu-icon ul {
+  display: hidden;
+  opacity: 0;
+  z-index: -1;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 2rem auto;
+  font-size: 2rem;
+  color: grey;
+}
+
 ul li:hover {
-  color:white;
+  color: white;
 }
 
 .menu-icon.open ul {
-    display:visible;
-    opacity:1;
-    z-index:2;
+  display: visible;
+  opacity: 1;
+  z-index: 2;
 }
+
 h1 {
-  padding-top:2rem;
-  font-size:2.5rem;
+  padding-top: 2rem;
+  font-size: 2.5rem;
 }
+
+/*# sourceMappingURL=realslide.css.map */
