@@ -55,6 +55,8 @@
   left: -30%;
   /*z-index: 1;*/
   z-index: 998;
+  /*visibility:hidden;
+  opacity:0;*/
   background: black;
   width: 30%;
   height: 100%;
@@ -73,6 +75,7 @@
 }
 .menu.open {
   left: 0;
+  /*visibility:visible;*/
 }
 
 *,

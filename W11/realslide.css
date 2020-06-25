@@ -1,0 +1,89 @@
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /*z-index: 2;*/
+    z-index: 999;
+    height: 28px;
+    width: 28px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .menu-icon:hover {
+    background: black;
+    padding: 0.125rem;
+  }
+  .menu-icon.open {
+    left: 0;
+    height:100vh;
+    width:30%;
+    background:black;
+    transform:translateX(0);
+    transition:2s ease-out;
+  }.menu-icon.open span  {
+    right:5%;
+    top:20px;
+  }
+  .menu-icon.open span::before:hover, .menu-icon.open span::after:hover {
+    background-color:grey;
+  }
+  .menu-icon span,
+  .menu-icon span::before,
+  .menu-icon span::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2.5px;
+    background: grey;
+    border-radius: 20px;
+    transition: all 500ms ease-out;
+  }
+  .menu-icon span::before {
+    top: -8px;
+  }
+  .menu-icon span::after {
+    top: 8px;
+  }
+  .menu-icon.open > span {
+    background: transparent;
+  }
+  .menu-icon.open > span::before, .menu-icon.open > span::after {
+    background: white;
+    top: 0px;
+  }
+  .menu-icon.open > span::before {
+    transform: rotate(-225deg);
+  }
+  .menu-icon.open > span::after {
+    transform: rotate(225deg);
+  }
+.menu-icon ul {
+    display:hidden;
+    opacity:0;
+    z-index:-1;
+    text-align:center;
+    margin:1rem auto;
+    /*display:flex;
+    flex-direction:column;
+    justify-items:center;
+    align-content:center;*/
+} 
+ul li {
+    list-style-type: none;
+    margin:2rem auto;
+    font-size:2rem;
+    color:grey;
+
+
+}
+
+.menu-icon.open ul {
+    display:visible;
+    opacity:1;
+    z-index:2;
+}
+h1 {
+  padding-top:2rem;
+}
