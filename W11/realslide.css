@@ -2,33 +2,24 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    /*z-index: 2;*/
-    z-index: 999;
+    z-index: 2;
     height: 28px;
     width: 28px;
-    outline: none;
+    /*outline: none;*/
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    
+    
   }
-  .menu-icon:hover {
-    background: black;
-    padding: 0.125rem;
-  }
-  .menu-icon.open {
-    left: 0;
+  .menu-icon::after {
+    top:0;
     height:100vh;
     width:30%;
-    background:black;
-    transform:translateX(0);
-    transition:2s ease-out;
-  }.menu-icon.open span  {
-    right:5%;
-    top:20px;
+    transform: translateX(-25%) ;
+    
+
   }
-  .menu-icon.open span::before:hover, .menu-icon.open span::after:hover {
-    background-color:grey;
-  }
+  
+  
   .menu-icon span,
   .menu-icon span::before,
   .menu-icon span::after {
@@ -39,6 +30,7 @@
     background: grey;
     border-radius: 20px;
     transition: all 500ms ease-out;
+    z-index:999;
   }
   .menu-icon span::before {
     top: -8px;
@@ -59,16 +51,35 @@
   .menu-icon.open > span::after {
     transform: rotate(225deg);
   }
+  .menu-icon span:hover,
+  .menu-icon span:hover::before,
+  .menu-icon span:hover::after {
+    background-color:black;
+  } 
+  
+  .menu-icon.open {
+    left: 0;
+    height:100vh;
+    width:30%;
+    background:black;
+    transform:translateX(0);
+    transition:2s ease-out;
+    margin-top:-1.5rem;
+  }
+  .menu-icon.open span  {
+    right:20px;
+    top:20px;
+  }
+   .menu-icon.open span:hover::before, .menu-icon.open span:hover::after {
+    background-color:grey;
+  }
 .menu-icon ul {
     display:hidden;
     opacity:0;
     z-index:-1;
     text-align:center;
     margin:1rem auto;
-    /*display:flex;
-    flex-direction:column;
-    justify-items:center;
-    align-content:center;*/
+    
 } 
 ul li {
     list-style-type: none;
@@ -78,6 +89,9 @@ ul li {
 
 
 }
+ul li:hover {
+  color:white;
+}
 
 .menu-icon.open ul {
     display:visible;
@@ -86,4 +100,5 @@ ul li {
 }
 h1 {
   padding-top:2rem;
+  font-size:2.5rem;
 }
