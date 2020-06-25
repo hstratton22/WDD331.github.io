@@ -73,7 +73,6 @@
   transition: 3s ease-out;
   /*margin-top:-1.5rem;*/
 }
-
 .menu-icon.open span {
   right: 20px;
   top: 20px;
@@ -83,22 +82,20 @@
   background-color: grey;
 }
 
-.menu-icon ul {
+ul {
   display: hidden;
   opacity: 0;
   z-index: -1;
   text-align: center;
   margin: 2rem auto;
 }
-
 ul li {
   list-style-type: none;
   margin: 2rem auto;
   font-size: 2rem;
   color: grey;
 }
-
-ul li:hover {
+ul:hover {
   color: white;
 }
 

@@ -76,33 +76,38 @@ $color-3:white;
     transform:translateX(0);
     transition:3s ease-out;
     /*margin-top:-1.5rem;*/
+
+    span  {
+      right:20px;
+      top:20px;
+    }
   }
-  .menu-icon.open span  {
-    right:20px;
-    top:20px;
-  }
+  
    .menu-icon.open span:hover::before, .menu-icon.open span:hover::after {
     background-color:$color1;
   }
-.menu-icon ul {
+ ul {
     display:hidden;
     opacity:0;
     z-index:-1;
     text-align:center;
     margin:2rem auto;
+   
+    li {
+      list-style-type: none;
+      margin:2rem auto;
+      font-size:2rem;
+      color:$color1;
+  
+  
+  }
+  &:hover {
+    color:$color-3;
+  }
     
 } 
-ul li {
-    list-style-type: none;
-    margin:2rem auto;
-    font-size:2rem;
-    color:$color1;
+ 
 
-
-}
-ul li:hover {
-  color:$color-3;
-}
 
 .menu-icon.open ul {
     display:visible;
