@@ -76,7 +76,7 @@
 }
 
 ul {
-  display: hidden;
+  visibility: hidden;
   opacity: 0;
   z-index: -1;
   text-align: center;
@@ -93,7 +93,7 @@ ul:hover {
 }
 
 .menu-icon.open ul {
-  display: visible;
+  visibility: visible;
   opacity: 1;
   z-index: 2;
 }
